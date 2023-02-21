@@ -1,6 +1,6 @@
 #!/bin/bash
 
-systemctl stop nginx
+sudo systemctl stop nginx
 
 REPOSITORY_URL="https://github.com/EusebioAjas/nginx-web-server-vm.git"
 LOCAL_DIR="$(pwd)"
@@ -12,6 +12,6 @@ else
   git pull origin master
 fi
 
-systemctl start nginx
+sudo systemctl start nginx
 ngrok http 80
 
